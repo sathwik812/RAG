@@ -1,0 +1,22 @@
+# Environment variables
+.env
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environment
+venv/
+env/
+ENV/
+.venv
+
+#vector database
+chroma_db/
+*.sqlite3
+
+# VSCode
+.vscode/*.bak
+.vscode/settings.json
