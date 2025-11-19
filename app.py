@@ -4,7 +4,7 @@ from backend.db_manager import create_vectorstore_from_text, get_vectorstore
 from backend.main import get_response
 from backend.config import settings
  
-st.set_page_config(page_title="Chat with TEXT Files",layout="wide")
+st.set_page_config(page_title="TextGPT",layout="wide")
 st.title("Chat with Text File")
  
 if "vector_store" not in st.session_state:
@@ -12,17 +12,6 @@ if "vector_store" not in st.session_state:
  
 with st.sidebar:
     st.header("Settings")
- 
-    # if (
-    #     not settings.GOOGLE_API_KEY
-    #     or settings.GOOGLE_API_KEY == "YOUR_GOOGLE_API_KEY_HERE"
-    # ):
-    #     st.error(
-    #         "Google API Key not found! Please create a .env file with your GOOGLE_API_KEY."
-    #     )
-    #     st.stop()
-    # else:
-    #     st.success("Google API Key loaded.")
  
     if st.session_state.vector_store:
         st.info("Existing database loaded from disk.")
